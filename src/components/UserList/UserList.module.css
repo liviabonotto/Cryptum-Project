@@ -1,0 +1,8 @@
+.tableContent{
+    display: flex;
+    justify-content: center;
+}
+
+.cellHeader{
+    text-align:'center';
+}

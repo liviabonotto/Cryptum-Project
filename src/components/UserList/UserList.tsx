@@ -6,6 +6,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import styles from "./UserList.module.css";
+
 
 function createData(
   name: string,
@@ -40,17 +42,19 @@ const rows = [
 
 export default function BasicTable() {
   return (
+    <div className={styles.tableContent}>
     <TableContainer component={Paper} style={{width:'1198px', overflow:'-moz-initial'}}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead >
           <TableRow style={{background: 'rgba(138, 135, 151, 0.2)', borderRadius:'40px', marginBottom:'10px',textAlign:'center'}}>
-            <TableCell style={{textAlign:'center'}}>Nome do Usuário</TableCell>
-            <TableCell align="right" style={{textAlign:'center'}}>ID do Usuário</TableCell>
-            <TableCell align="right"style={{textAlign:'center'}}>Email</TableCell>
-            <TableCell align="right"style={{textAlign:'center'}}>Projetos</TableCell>
-            <TableCell align="right"style={{textAlign:'center'}}>Assinaturas</TableCell>
-            <TableCell align="right"style={{textAlign:'center'}}>País</TableCell>
-            <TableCell align="right"style={{textAlign:'center'}}>Último Login</TableCell>
+            <TableCell align="center" className={styles.cellHeader} >Nome do Usuário</TableCell>
+            <TableCell align="center" className={styles.cellHeader}>ID do Usuário</TableCell>
+            <TableCell align="center" className={styles.cellHeader}>Email</TableCell>
+            <TableCell align="center" className={styles.cellHeader}>Projetos</TableCell>
+            <TableCell align="center" className={styles.cellHeader}>Assinaturas</TableCell>
+            <TableCell align="center" className={styles.cellHeader}>País</TableCell>
+            <TableCell align="center" className={styles.cellHeader}>Último Login</TableCell>
+            
           </TableRow>
         </TableHead>
         
@@ -76,5 +80,6 @@ export default function BasicTable() {
         </TableBody>
       </Table>
     </TableContainer>
+    </div>
   );
 }
