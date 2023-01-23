@@ -1,11 +1,15 @@
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
+    <Head>
+          <link rel="shortcut icon" href="/icon.svg" type="image/x-icon" />
+          </Head>
       <main className={styles.main}> 
           <div className={styles.container}>
             <div className='Background'> 

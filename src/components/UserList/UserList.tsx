@@ -43,17 +43,17 @@ const rows = [
 export default function BasicTable() {
   return (
     <div className={styles.tableContent}>
-    <TableContainer component={Paper} style={{width:'1198px', overflow:'-moz-initial'}}>
+    <TableContainer component={Paper} style={{width:'1198px', background: '#2B2F42'}}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead >
-          <TableRow style={{background: 'rgba(138, 135, 151, 0.2)', borderRadius:'40px', marginBottom:'10px',textAlign:'center'}}>
-            <TableCell align="center" className={styles.cellHeader} >Nome do Usuário</TableCell>
+          <TableRow style={{background: '#3E4153', borderRadius:'40px',textAlign:'center'}}>
+            <TableCell align="center" className={`${styles.cellHeader} ${styles.cellName}`} >Nome do Usuário</TableCell>
             <TableCell align="center" className={styles.cellHeader}>ID do Usuário</TableCell>
             <TableCell align="center" className={styles.cellHeader}>Email</TableCell>
             <TableCell align="center" className={styles.cellHeader}>Projetos</TableCell>
             <TableCell align="center" className={styles.cellHeader}>Assinaturas</TableCell>
             <TableCell align="center" className={styles.cellHeader}>País</TableCell>
-            <TableCell align="center" className={styles.cellHeader}>Último Login</TableCell>
+            <TableCell align="center" className={`${styles.cellHeader} ${styles.ultimoLogin}`}>Último Login</TableCell>
             
           </TableRow>
         </TableHead>
@@ -66,15 +66,16 @@ export default function BasicTable() {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               style={{background:'#1B2232', borderRadius:'10px'}}
             >
-              <TableCell component="th" scope="row"  style={{ color:'white',textAlign:'center'}}>
+
+              <TableCell component="th" align="center" scope="row" className={`${styles.cellBody} ${styles.idCell}`}>
                 {row.name}
               </TableCell>
-              <TableCell align="right" style={{ color:'white',textAlign:'center'}}>{row.id}</TableCell>
-              <TableCell align="right" style={{ color:'white',textAlign:'center'}}>{row.email}</TableCell>
-              <TableCell align="right"style={{ color:'white',textAlign:'center'}}>{row.projetos}</TableCell>
-              <TableCell align="right"style={{ color:'white',textAlign:'center'}}>{row.assinaturas}</TableCell>
-              <TableCell align="right"style={{ color:'white',textAlign:'center'}}>{row.pais}</TableCell>
-              <TableCell align="right"style={{ color:'white',textAlign:'center', borderRadius:'0,10px,10px,0'}}>{row.lastLogin}</TableCell>
+              <TableCell align="center" className={`${styles.cellBody}`}>{row.id}</TableCell>
+              <TableCell align="center" className={styles.cellBody}>{row.email}</TableCell>
+              <TableCell align="center" className={styles.cellBody}>{row.projetos}</TableCell>
+              <TableCell align="center" className={styles.cellBody}>{row.assinaturas}</TableCell>
+              <TableCell align="center" className={styles.cellBody}>{row.pais}</TableCell>
+              <TableCell align="center" className={`${styles.cellBody} ${styles.cellLastLogin}`}>{row.lastLogin}</TableCell>
             </TableRow>
           ))}
         </TableBody>

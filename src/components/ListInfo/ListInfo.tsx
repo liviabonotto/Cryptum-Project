@@ -4,6 +4,8 @@ import UserList from "../UserList/UserList";
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import { color } from "@mui/system";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Date from "../Date/Date";
 
 const options = [
   {
@@ -20,7 +22,11 @@ const options = [
   },
  
 ];
-
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 export default function ListInfo(){
     return (
@@ -32,19 +38,29 @@ export default function ListInfo(){
             Exportar Planilha
             </button>
           </div>
-          <TextField id="outlined-basic" label="Nome/Id/Email"  defaultValue="" variant="outlined" style={{  borderRadius:'4px', color:'white',marginLeft:'45px',marginTop:'15px',marginBottom:'15px'}}/>
-          
+          <div className={styles.box}>
+            <div className={styles.pickers}>
+          <ThemeProvider theme={darkTheme}>
+          <TextField id="outlined-basic" label="Nome/Id/Email" variant="outlined"   style={{borderColor: 'white',marginLeft:'45px',marginTop:'15px',marginBottom:'15px'}}/>
           <TextField
-          id="outlined-select-currency"
-          select
-          defaultValue="País"
-          style={{borderColor: 'white',marginLeft:'45px',marginTop:'15px',marginBottom:'15px'}}>
-           {options.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
+            id="outlined-select-currency"
+            select
+            defaultValue="País"
+            style={{borderColor: 'white',marginLeft:'45px',marginTop:'15px',marginBottom:'15px'}}>
+            {options.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+          {/* <Date></Date> */}
+          </ThemeProvider>
+            </div>
+            <div>
+              <p>Total de usuários: XXX</p>
+            </div>
+          </div>
+          
 
         </div>
       );

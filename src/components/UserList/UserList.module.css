@@ -1,8 +1,35 @@
 .tableContent{
     display: flex;
     justify-content: center;
+    background-color: #2B2F42;
 }
 
 .cellHeader{
     text-align:'center';
+    color: white;
+    height: 18px;
+    font-weight: 700;
+    border-bottom: #2B2F42 10px solid;
+}
+
+.ultimoLogin{
+    border-radius: 0 10px 10px 0 ;
+}
+
+.cellName{
+    border-radius: 10px 0 0 10px;
+}
+
+.cellBody{
+    color: white;
+    border: none;
+    border-bottom: #2B2F42 10px solid;
+}
+
+.idCell{
+    border-radius: 10px 0 0 10px;
+}
+
+.cellLastLogin{
+    border-radius: 0 10px 10px 0;
 }
