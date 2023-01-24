@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+.containerTable{
+    height: 107px;
+    margin-top: 20px;
+}
+
+.headerTable{
+    background-color: #1B2232;
+    font-family:  'Inter';
+}

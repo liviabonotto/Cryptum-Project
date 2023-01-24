@@ -1,10 +1,11 @@
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header/Header';
-//import UserList from '@/components/UserList/UserList';
 import ListInfo from '@/components/ListInfo/ListInfo';
 import UserList from '@/components/UserList/UserList';
 import Head from 'next/head';
+import Portal from '@mui/base/Portal';
+
 
 export default function Users() {
     return (
@@ -16,6 +17,8 @@ export default function Users() {
           <Header></Header>
           <ListInfo></ListInfo>
           <UserList></UserList>
+  
+          
         </div>
       );
 }

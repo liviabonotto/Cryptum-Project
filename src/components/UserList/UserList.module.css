@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
 .tableContent{
     display: flex;
     justify-content: center;
@@ -21,6 +24,7 @@
 }
 
 .cellBody{
+    cursor: pointer;
     color: white;
     border: none;
     border-bottom: #2B2F42 10px solid;
@@ -32,4 +36,51 @@
 
 .cellLastLogin{
     border-radius: 0 10px 10px 0;
+}
+
+.userDetails{
+   height: 501px;
+   width: 658px ;  
+   border-radius: 10px; 
+   background-color: #1B2232;  
+}
+
+.userProfile{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: 'Lato';
+    margin-top: 39px;
+}
+
+.userProfile img{
+    margin-left: 59px;
+    margin-right: 23px;
+}
+
+.userInfo{
+    font-family: 'Lato';
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 47px;
+    margin-left: 59px;
+}
+
+.userInfo p{
+    margin-bottom: 20px;
+}
+
+.userInfo img{
+    margin: 0 15px 0 15px;
+}
+
+.projectInfo h2{
+    color: white;
+    font-family: 'Inter';
+    margin-left: 59px;
 }
