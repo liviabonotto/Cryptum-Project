@@ -10,20 +10,23 @@ import styles from '../ProjectInfo/ProjectInfo.module.css'
 
 function createData(
   name: string,
-  calories: number,
-  fat: number,
-  carbs: number,
-  protein: number,
+  tipo: string,
+  creditosUsados: number,
+  network: string,
+  plano: string,
 ) {
-  return { name, calories, fat, carbs, protein };
+  return { name, tipo, creditosUsados, network, plano };
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('Minha loja', 'Store', 6.0, 'Testnet', 'Free'),
+  createData('Meu App', 'Developer', 9.0, 'Mainnet', 'Advanced'),
+  createData('Minha loja', 'Store', 6.0, 'Testnet', 'Free'),
+  createData('Meu App', 'Developer', 9.0, 'Mainnet', 'Advanced'),
+  createData('Minha loja', 'Store', 6.0, 'Testnet', 'Free'),
+  createData('Meu App', 'Developer', 9.0, 'Mainnet', 'Advanced'),
+  createData('Minha loja', 'Store', 6.0, 'Testnet', 'Free'),
+  createData('Meu App', 'Developer', 9.0, 'Mainnet', 'Advanced'),
 ];
 
 export default function ProjectInfo() {
@@ -39,19 +42,19 @@ export default function ProjectInfo() {
             <TableCell align="center" className={styles.headerCell}>Plano</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody className={styles.tableBody}>
           {rows.map((row) => (
             <TableRow
               key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell component="th" scope="row"  align="center" className={styles.bodyCell}>
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="center" className={styles.bodyCell}>{row.tipo}</TableCell>
+              <TableCell align="center" className={styles.bodyCell}>{row.creditosUsados}</TableCell>
+              <TableCell align="center" className={styles.bodyCell}>{row.network}</TableCell>
+              <TableCell align="center" className={styles.bodyCell}>{row.plano}</TableCell>
             </TableRow>
           ))}
         </TableBody>

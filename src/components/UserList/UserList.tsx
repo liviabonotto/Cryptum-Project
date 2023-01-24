@@ -54,7 +54,7 @@ export default function BasicTable() {
     <div>
 
     <div className={styles.tableContent}>
-    <TableContainer component={Paper} style={{width:'1198px', background: '#2B2F42'}}>
+    <TableContainer component={Paper} style={{width:'1198px', background: '#2B2F42', height:'441px', marginBottom:'40px'}}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead >
           <TableRow style={{background: '#3E4153', borderRadius:'40px',textAlign:'center'}}>

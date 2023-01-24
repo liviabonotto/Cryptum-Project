@@ -45,3 +45,8 @@
     color: white;
     margin: 40px 45px 0 0;
 }
+
+.display{
+    display: flex;
+    flex-direction: row;
+}

@@ -3,9 +3,27 @@
 .containerTable{
     height: 107px;
     margin-top: 20px;
+    width: 650px;
+    justify-content: center;
 }
 
 .headerTable{
     background-color: #1B2232;
+    
+}
+.headerCell{
     font-family:  'Inter';
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    border: 5px solid #1B2232;
+}
+
+.bodyCell{
+    background-color: #282F3F;
+    color: white;
+}
+
+.tableBody{
+    background-color: #282F3F;
 }

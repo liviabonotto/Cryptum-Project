@@ -41,6 +41,7 @@ export default function ListInfo(){
           <div className={styles.box}>
             <div className={styles.pickers}>
           <ThemeProvider theme={darkTheme}>
+            <div className={styles.display}>
           <TextField id="outlined-basic" label="Nome/Id/Email" variant="outlined"   style={{borderColor: 'white',marginLeft:'45px',marginTop:'15px',marginBottom:'15px'}}/>
           <TextField
             id="outlined-select-currency"
@@ -53,7 +54,8 @@ export default function ListInfo(){
               </MenuItem>
             ))}
           </TextField>
-          {/* <Date></Date> */}
+          <Date></Date>
+          </div>
           </ThemeProvider>
             </div>
             <div>
